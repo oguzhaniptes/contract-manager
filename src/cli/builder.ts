@@ -2,9 +2,8 @@ import { compileFunc, compilerVersion } from "@ton-community/func-js";
 import { Cell } from "ton";
 import fs from "fs";
 import { writeFile } from "fs/promises";
-import { compileResultToCell } from "./compile";
 import path from "path";
-import { BUILD_DIR } from "./paths";
+import { BUILD_DIR } from "../../ui/paths";
 
 async function main() {
   let version = await compilerVersion();
