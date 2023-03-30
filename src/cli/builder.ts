@@ -3,11 +3,11 @@ import { Cell } from "ton";
 import fs from "fs";
 import { writeFile } from "fs/promises";
 import path from "path";
-import { BUILD_DIR } from "../../ui/paths";
+import { BUILD_DIR } from "../paths";
 
 async function main() {
   let version = await compilerVersion();
-  const buildArtifactPath = path.join(BUILD_DIR, `.compiled.json`);
+  const buildArtifactPath = path.join(BUILD_DIR, `hex.compiled.json`);
   console.log(version);
   try {
     let result = await compileFunc({
